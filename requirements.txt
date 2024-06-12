@@ -1,0 +1,10 @@
+matplotlib==3.8.4
+neptune==1.10.2
+neptune-pytorch==2.0.0
+numpy==1.26.4
+pandas==2.2.2
+pillow==10.2.0
+scipy==1.13.0
+torch==2.3.0
+torchvision==0.18.0
+configparser==6.0.0

@@ -1,0 +1,27 @@
+services:
+  sl_prioritization:
+    tty: true
+    stdin_open: true
+    build: .
+    volumes:
+     - ./agent:/sl_prioritized_sampling/agent
+     - ./callbacks:/sl_prioritized_sampling/callbacks
+     - ./data:/sl_prioritized_sampling/data
+     - ./dataset:/sl_prioritized_sampling/dataset
+     - ./factory:/sl_prioritized_sampling/factory
+     - ./trainer:/sl_prioritized_sampling/trainer
+     - ./training_functions:/sl_prioritized_sampling/training_functions
+     - ./configuration.ini:/sl_prioritized_sampling/configuration.ini
+     - ./train.py:/sl_prioritized_sampling/train.py
+    environment:
+      - QT_X11_NO_MITSHM=1
+      - HOST_USER=$USER
+      - NVIDIA_VISIBLE_DEVICES=all
+    container_name: sl_prioritization
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]

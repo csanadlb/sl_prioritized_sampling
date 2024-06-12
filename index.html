@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Strategically navigating through datasets via information value-based prioritization yields performance enhancements in Supervised Learning scenarios">
+  <meta name="keywords" content="Strategic Data Navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./static/images/logo.ico?"/>
+  <title>Strategic Data Navigation: Information Value-based Sample Selection</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/academicons.min.css"/>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <img src="static/images/thumbnail.png" alt="Strategic Data Navigation" width="5000" height="3000"/>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Information Value-based Sample Selection</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=p0eQRMAAAAAJ&hl=en" target="_blank">Csanád L. Balogh</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=4y2OD3QAAAAJ&hl=en" target="_blank">Bálint Pelenczei</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=WrtttXEAAAAJ&hl=en" target="_blank">Bálint Kővári</a><sup>1,3</sup></span>
+            <span class="author-block">
+              and <a href="https://scholar.google.com/citations?user=Sdw_b5YAAAAJ&hl=en" target="_blank">Tamás Bécsi</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Department of Control for Transportation and Vehicle Systems, Faculty of Transportation Engineering and Vehicle Engineering, Budapest University of Technology and Economics</span>
+            <span class="author-block"><sup>2</sup>Systems and Control Laboratory, HUN-REN Institute for Computer Science and Control (SZTAKI)</span>
+            <span class="author-block"><sup>3</sup>Asura Technologies Ltd.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/csanadlb/sl_prioritized_sampling"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://www.cs.toronto.edu/~kriz/cifar.html"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Artificial Intelligence represents a rapidly expanding domain, with several industrial applications demonstrating its superiority over traditional techniques. Despite numerous advancements within the subfield of Machine Learning, it encounters persistent challenges, highlighting the importance of ongoing research efforts. Among its primary branches, this study delves into two categories, being Supervised and Reinforcement Learning, particularly addressing the common issue of data selection for training. The inherent variability in informational content among data points is apparent, wherein certain samples offer more valuable information to the neural network than others. However, evaluating the significance of various data points remains a non-trivial task, generating the need for a robust method to effectively prioritize samples. Drawing inspiration from Reinforcement Learning principles, this paper introduces a novel sample prioritization approach, applied to Supervised Learning scenarios, aimed at enhancing classification accuracy through strategic data navigation, while exploring the boundary between Reinforcement and Supervised Learning techniques. We provide a comprehensive description of our methodology, while revealing the identification of an optimal prioritization balance and demonstrating its beneficial impact on model performance. Although classification accuracy serves as the primary validation metric, the concept of information density-based prioritization encompasses wider applicability. Additionally, the paper investigates parallels and distinctions between Reinforcement and Supervised Learning methods, declaring that the foundational principle is equally relevant, hence completely adaptable to Supervised Learning with appropriate adjustments due to different learning frameworks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+    <!--/ Abstract. -->
+
+<hr/>
+
+<!-- Machine Learning. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Machine Learning</h2>
+
+    <!-- Reinforcement Learning -->
+    <h3 class="title is-4">Reinforcement Learning</h3>
+    <div class="columns is-centered">
+      <!-- Image Column for Reinforcement Learning -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="./static/images/dqn_schematic.png" width="400" height="400"/>
+        </div>
+      </div>
+
+      <!-- Text Column for Reinforcement Learning -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            Reinforcement Learning has emerged as a prominent approach for addressing complex
+            control problems and optimization challenges. Its efficiency in maneuvering through
+            nonlinear and intricate problem spaces has been showcased in a diverse set of applications.
+          </p>
+          <p>
+            Unlike other Machine Learning paradigms, RL operates without predefined labels for training data,
+            instead dynamically generating it during the learning phase. The workflow is conceptually
+            characterized by a sequence of interactions between two entities: the learning agent and the environment.
+          </p>
+          <p>
+            At each step, the agent evaluates the current state and executes a decision receiving a feedback, known as
+            the reward, quantitatively measuring the impact of an action on progressing towards the optimal policy.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supervised Learning -->
+    <h3 class="title is-4">Supervised Learning</h3>
+    <div class="columns is-centered">
+      <!-- Text Column for Supervised Learning -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            Supervised Learning is using labeled datasets to iteratively adjust neural network weights through
+            a loss function and train the network for data classification (sorting data into predefined categories)
+            or regression (predicting relationships between variables). It enables machines to learn from past data
+            for future predictions or decisions.
+          </p>
+          <p>
+            Deep Learning has greatly advanced computer vision, enabling machines to process and understand
+            images and videos. It uses deep neural networks to learn identify patterns on images, allowing
+            our models to perform tasks like recognizing objects, detecting faces, and understanding
+            scenes with high accuracy. Deep learning's ability to identify patterns and features at
+            different levels, from simple edges to complex shapes, makes it essential for tasks requiring
+            visual recognition.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image Column for Supervised Learning -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="./static/images/sl.png" width="400" height="400"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Machine Learning. -->
+
+<hr/>
+
+<!-- Methodology. -->
+<div class="container is-max-desktop">
+    <div class="content has-text-justified">
+      <h2 class="title is-3">Our Concept</h2>
+      <p>
+        In the domain of Reinforcement Learning, effective sample prioritization is essential, but often relies on
+        stochastic sampling methods, resulting in suboptimal efficiency. Our paper introduces a novel approach
+        integrating RL insights into Supervised Learning, aiming  to bridge this efficiency gap. To mitigate the risk of
+        overfitting, we employ a dual-component priority metric, ensuring a balanced exploration-exploitation trade-off.
+      </p>
+      <p>
+        The workflow of our method commences by establishing a uniform probability distribution for stochastic sampling
+        over the training dataset. Subsequent steps involve loss computation, model fitting and the acquisition
+        of exploration and exploitation metrics, respectively. We then compute individual sample weights, also referred
+        to as Upper Confidence Bound (UCB) values, based on these metrics. These weights are utilized afterwards to
+        update the probability distribution, prioritizing samples with higher information density.
+      </p>
+      <div class="has-text-centered">
+        <img src="./static/images/supervised_learning_prioritization.png"/>
+      </div>
+    </div>
+</div>
+<!--/ Methodology. -->
+
+
+
+<hr/>
+
+<!-- Results. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+
+    <!-- Convergence -->
+    <h3 class="title is-4">Validation Accuracy</h3>
+    <div class="columns is-centered">
+      <!-- Text Column for Convergence -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            Through a comprehensive experimentation in the field of image classification, employing benchmark datasets
+            and widely recognized neural network architectures, we validate the superior performance of our proposed
+            methodology. Based on the gathered results, we can conclude, that our approach offers an efficient process
+            for sample prioritization, thereby enhancing sampling efficiency and ultimately improving model performance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image Column for Convergence -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="static/images/convergence.png" width="350" height="350"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- t-SNE -->
+    <h3 class="title is-4">Sampling Distribution</h3>
+    <div class="columns is-centered">
+
+      <!-- Image Column for t-SNE -->
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <img src="./static/images/tsne.png" width="600" height="600"/>
+        </div>
+      </div>
+
+      <!-- Text Column for t-SNE -->
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <p>
+            In our study, we applied the t-Distributed Stochastic Neighbor Embedding algorithm to visualize the CIFAR10
+            dataset, representing its ten classes with different colors. Notably, we incorporated the frequency of each
+            sample's utilization in model training as an additional dimension in our visualization. Larger points
+            indicate samples, that were more frequently used during training. This visualization provides valuable
+            insights into how prioritization strategies influence the learning process, complementing our quantitative
+            analyses.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!--/ Results. -->
+
+<hr/>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <p>
+      Please use this BibTeX in case you would like to cite our work in your publications:
+    </p>
+    <pre><code>@article{,
+  author    = {},
+  title     = {},
+  journal   = {},
+  year      = {},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content">
+          <p>
+            This website is constructed using the source code provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, allow us to express our appreciation for their contribution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
