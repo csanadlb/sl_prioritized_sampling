@@ -117,10 +117,13 @@ python3 train.py
 Please use this bibtex if you would like to cite our work in your publications:
 
 ```bibtex
-@article{,
-  author={},
-  title={},
-  journal={},
-  year={}
-}
+@article{balogh2024strategic,
+    author = {Balogh, Csan{\'a}d L. and Pelenczei, B{\'a}lint and K{\H o}v{\'a}ri, B{\'a}lint and B{\'e}csi, Tam{\'a}s},
+    title = {Strategic data navigation: information value-based sample selection},
+    journal = {Artificial Intelligence Review},
+    volume = {57},
+    number = {7},
+    pages = {187},
+    year = {2024}}
 ```
+ 
